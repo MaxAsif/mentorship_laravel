@@ -1,3 +1,8 @@
+<!-- 
+    Profile Controller contains all the function to view the profile page
+    login the user with authentication
+
+ -->
 <?php
 
 namespace App\Http\Controllers;
@@ -9,14 +14,26 @@ use App\User;
 
 class ProfileController extends Controller
 {
+    /*
+        It alloews only logged in user to use function except the store function 
+    */
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['store']);
+    }
+    /*
+        loggin the user using auth controller after finding the user id
+    */
     public function index($id)
     {
     	$user = User::find($id);
     	auth()->login($user);
-    	//dd($user);
-        return redirect('/show');
+    	return redirect('/show');
 
     }
+    /*
+        It get the details of the user and pass it to show.blade.php 
+    */
     public function show()
     {
         $user = auth()->user();
@@ -27,6 +44,10 @@ class ProfileController extends Controller
 
         return view('show',compact('details'));
     }
+    /*
+        It authenticate and login the user if authenticate
+        else shows suitable message 
+    */
     public function store()
     {
 
@@ -40,6 +61,9 @@ class ProfileController extends Controller
         }
         return redirect('/show');
     }
+    /*
+        It is used to logout the user
+    */
     public function destroy()
     {
         auth()->logout();

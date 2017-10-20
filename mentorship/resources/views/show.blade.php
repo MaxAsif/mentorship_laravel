@@ -16,11 +16,23 @@
 					<ul class="list-group">
 						<li class="list-group-item"><strong>Email</strong><span class="pull-right">{{ $details ->email }}</span>
 						</li>
+						@if($details->roll !='')
 						<li class="list-group-item"><strong>Roll Number </strong><span class="pull-right">{{ $details ->roll }}</span>
 						</li>
+						@endif
+						@if($details->phone !='')
+						<li class="list-group-item"><strong>Phone Number </strong><span class="pull-right">{{ $details ->phone }}</span>
+						</li>
+						@endif
+						@if($details->pout !='')
+						<li class="list-group-item"><strong>Year of Graduation</strong><span class="pull-right">{{ $details ->pout }}</span>
+						</li>
+						@endif
 						<li class="list-group-item"><strong>Department  </strong><span class="pull-right">{{ $details ->department }}</span>
 						</li>
+						@if($details->hall!='')
 						<li class="list-group-item"><strong>Hall </strong><span class="pull-right">{{ $details->hall }}</span></li>
+						@endif
 					</ul>		
 				</div>
 			</div>

@@ -1,15 +1,17 @@
+<!--
+	This is the page for registration of mentee using modal_s
+	Action of the form page uses Mentee Controller calling store function
+ -->
 @include('../home')
-
-
-@include('../home')
-
 <!-- Modal Trigger -->
 <a class="waves-effect waves-light btn modal-trigger" style="display: none;" href="#modal_s"></a>
 <div id="modal_s" class="modal"  role="dialog" >
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<a href="/">
+					<button type="button" class="close">&times;</button>
+				</a>
 				<h4 class="modal-title" style="text-align:center;">Register  Here</h4>
 			</div>
 			<div class="modal-body">				

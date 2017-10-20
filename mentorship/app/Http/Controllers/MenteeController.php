@@ -1,3 +1,10 @@
+<!--
+	Contains All the contrioller function to create the mentee profile 
+	It has middle ware which only allows guest to view the mentee registration page
+
+
+-->
+
 <?php
 
 namespace App\Http\Controllers;
@@ -7,10 +14,25 @@ use App\Mentee;
 use App\User;
 class MenteeController extends Controller
 {
+	/*
+		Allows only guest to acces these function
+	*/
+	public function __construct()
+	{
+		$this->middleware('guest');
+	}
+	/*
+		Show registration page for mentee
+	*/
 	public function create()
 	{
 		return view ('mentee.registration');
 	}
+
+	/*
+		Store the all the details in Mentee table in database as well as 
+		email and password  and type='mentee' in user table in database
+	*/
 	public function store()
 
 	{
@@ -42,7 +64,7 @@ class MenteeController extends Controller
 			'email' => request('email'),
 		]);
 
-		auth()->login($user);
-		return redirect('/show/'.$user->id);	
+		auth()->login($user);// login the user using auth controller
+		return redirect('/show/'.$user->id);// sends get request to showcontroller with user id	
 	}
 }

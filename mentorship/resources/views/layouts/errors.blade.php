@@ -1,3 +1,6 @@
+<!--
+	It shows errors in registration and login page
+-->
 @if(count($errors))
 <div class="form-group">
 	<div class="error alert-danger">

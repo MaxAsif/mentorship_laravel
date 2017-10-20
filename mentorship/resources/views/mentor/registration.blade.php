@@ -1,8 +1,9 @@
-
+<!--
+	This is the page for registration of mentor using modal_a
+	Action of the form page uses Mentor Controller calling store function
+ -->
 @include('../home')
-<style type="text/css">
 
-</style>
 
 <!-- Modal Trigger -->
 <a class="waves-effect waves-light btn modal-trigger" style="display: none;" href="#modal_a"></a>
@@ -10,7 +11,9 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<a href="/">
+					<button type="button" class="close">&times;</button>
+				</a>
 				<h4 class="modal-title" style="text-align:center;">Register  Here</h4>
 			</div>
 			<div class="modal-body">

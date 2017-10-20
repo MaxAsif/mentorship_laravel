@@ -1,3 +1,7 @@
+<!--
+	It is the main page for profile page which contains its own navabar and footer
+	It also has a section called content
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
