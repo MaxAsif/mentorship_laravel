@@ -1,6 +1,6 @@
 # mentorship_laravel
-Create a .env file with content same as .env.example with your database name and username and password
-Run following comands first:
+# Create a .env file with content same as .env.example with your database name and username and password
+# Run following comands first:
 
     composer install
     composer dump-autoload
