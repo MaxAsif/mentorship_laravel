@@ -1,10 +1,9 @@
-<!-- 
+<?php
+/*
     Profile Controller contains all the function to view the profile page
     login the user with authentication
 
- -->
-<?php
-
+*/
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
